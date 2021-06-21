@@ -1,0 +1,19 @@
+  import random
+dice_range = range(2, 12)
+print('Приветствуем Вас в ввирутальном казино "OzonSkills". На Ваш депозитный счет зачислино 10000')
+deposit = 10000
+while deposit > 0:
+    if deposit <= 0:
+        Print ('У тебя не хватает средст на счету. Прощайте')
+    rnd_dice = random.randint(2, 12)
+    user_value = int(input('Угадайте числа на выпавших кубиках'))
+        if user_value == rnd_dice:
+            deposit += 1000
+            print('Невероятно! Ты угадал! Твой депозитный счет составляет', deposit)
+            print(rnd_dice)
+            break
+        else:
+            print('На кубиках выпало {}.'.format(rnd_dice), 'А Вы поставили на {}. Давай еще попытку!'.format(user_value))
+            deposit-=1000
+            print('На твоем счету осталось', deposit)
+print('Не расстраивайтесь. Приходите еще.')
